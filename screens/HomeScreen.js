@@ -1,11 +1,11 @@
-import {View, Text} from 'react-native';
 import React from 'react';
+import Header from '../components/Header';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
+    <>
+      <Header navigation={navigation} />
+    </>
   );
 };
 
