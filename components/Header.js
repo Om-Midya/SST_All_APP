@@ -2,8 +2,10 @@ import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Image} from 'react-native';
 import * as Icons from 'react-native-heroicons/solid';
+import {useNavigation} from '@react-navigation/native';
 
-const Header = ({navigation}) => {
+const Header = () => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView>
       <View className="flex-row p-3 items-center space-x-3 bg-white shadow-lg">
@@ -17,7 +19,7 @@ const Header = ({navigation}) => {
           <Text className="font-bold text-gray-400 text-sm">Good Morning!</Text>
           <Text className="font-bold text-black text-2xl">Archisman Midya</Text>
         </View>
-        <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+        <TouchableOpacity onPress={() => navigation.openDrawer()}>
           <Icons.Bars3BottomRightIcon size={35} color="#000" />
         </TouchableOpacity>
       </View>
